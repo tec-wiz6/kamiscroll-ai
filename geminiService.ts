@@ -2,7 +2,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AppState, ManhwaStory, Page, Panel, Character } from "./types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_GEMINI_API_KEY || ''
+});
+
 
 const STORY_SCHEMA = {
   type: Type.OBJECT,
