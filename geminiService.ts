@@ -3,7 +3,7 @@ import { GoogleGenAI, Type } from "@google/genai";
 import { AppState, ManhwaStory, Page, Panel, Character } from "./types";
 
 const ai = new GoogleGenAI({
-  apiKey: import.meta.env.VITE_GEMINI_API_KEY || ''
+  apiKey: import.meta.env.API_KEY || ''
 });
 
 
